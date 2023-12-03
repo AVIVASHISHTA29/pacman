@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let ghostIntervals = [];
 
     const startGame = () => {
+        document.addEventListener('keydown', movePacman);
         gameActive = true;
         score = 0;
         scoreDisplay.textContent = score;
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pacman.style.top = pacmanPos.top + 'px';
     };
 
-    document.addEventListener('keydown', movePacman);
+    // document.addEventListener('keydown', movePacman);
     startButton.addEventListener('click', startGame);
     endButton.addEventListener('click', endGame);
 });
